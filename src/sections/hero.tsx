@@ -19,13 +19,13 @@ export default function Hero() {
       </p>
 
       <div className="flex gap-4">
-        
+        <a
           href="#contact"
           className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors"
         >
           Get in touch
         </a>
-        
+        <a
           href={profile.githubUrl}
           target="_blank"
           rel="noopener noreferrer"

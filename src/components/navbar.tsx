@@ -21,7 +21,7 @@ export default function Navbar() {
         {/* Desktop links */}
         <div className="hidden md:flex gap-8">
           {links.map((link) => (
-            
+            <a
               key={link.href}
               href={link.href}
               className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -45,7 +45,7 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden px-6 pb-4 flex flex-col gap-4 bg-white border-b border-gray-200">
           {links.map((link) => (
-            
+            <a
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}

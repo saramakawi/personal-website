@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github } from 'lucide-react';
 import { profile } from '../data/resume';
 
 export default function Hero() {

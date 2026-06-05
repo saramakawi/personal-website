@@ -3,9 +3,9 @@ import type { Project } from '../types/resume';
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+    <div className="border border-gray-200 dark:border-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow">
       <div className="flex justify-between items-start mb-3">
-        <h3 className="text-lg font-semibold text-gray-900">{project.name}</h3>
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">{project.name}</h3>
         <div className="flex gap-3">
           {project.githubUrl && (
             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
@@ -21,10 +21,10 @@ export default function ProjectCard({ project }: { project: Project }) {
           )}
         </div>
       </div>
-      <p className="text-gray-600 mb-4">{project.description}</p>
+      <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
       <div className="flex flex-wrap gap-2">
         {project.technologies.map((tech) => (
-          <span key={tech} className="text-xs px-2 py-1 bg-blue-50 text-blue-700 rounded">
+          <span key={tech} className="text-xs px-2 py-1 bg-blue-50 dark:bg-blue-900 text-blue-700 dark:text-blue-300 rounded">
             {tech}
           </span>
         ))}

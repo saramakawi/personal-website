@@ -10,7 +10,7 @@ import Contact from './sections/contact';
 
 function App() {
   return (
-    <div className="bg-white text-gray-900">
+    <div className="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100">
       <Navbar />
       <main className="pt-16">
         <Hero />

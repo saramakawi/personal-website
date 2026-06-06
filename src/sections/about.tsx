@@ -1,10 +1,11 @@
 export default function About() {
     return (
-      <section id="about" className="max-w-5xl mx-auto px-6 py-24">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8">
-          <span className="text-blue-600 dark:text-blue-400">01.</span> About Me
+    <section id="about" className="max-w-5xl mx-auto px-6 py-24">
+      <div className="rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 p-8 md:p-12">
+        <h2 className="text-3xl font-bold text-white mb-8">
+          <span className="text-teal-400">01.</span> About Me
         </h2>
-        <div className="max-w-3xl text-gray-600 dark:text-gray-400 text-lg space-y-4">
+        <div className="max-w-3xl text-gray-400 text-lg space-y-4">
           <p>
             I'm a software engineer at M&amp;T Bank with three years in tech,
             working across data engineering and enterprise platform development
@@ -22,6 +23,7 @@ export default function About() {
             Node/Express backend — a demonstration as much as a description.
           </p>
         </div>
-      </section>
+      </div>
+    </section>
     );
   }

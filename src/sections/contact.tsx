@@ -29,57 +29,58 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="max-w-2xl mx-auto px-6 py-24 text-center">
-      <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-        <span className="text-blue-600 dark:text-blue-400">06.</span> Get In Touch
-      </h2>
-      <p className="text-gray-600 dark:text-gray-400 mb-8">
-        Open to full-stack and frontend opportunities. Drop me a message.
-      </p>
+    <section id="contact" className="max-w-5xl mx-auto px-6 py-24">
+      <div className="rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 p-8 md:p-12">
+        <h2 className="text-3xl font-bold text-white mb-8">
+          <span className="text-teal-400">06.</span> Get In Touch
+        </h2>
+        <p className="text-gray-400 dark:text-gray-400 mb-8">
+          Open to full-stack and frontend opportunities. Drop me a message.
+        </p>
+        <div className="flex flex-col gap-4 text-left">
+          <input
+            name="name"
+            placeholder="Name"
+            value={form.name}
+            onChange={handleChange}
+            className="px-4 py-3 border border-gray-600 dark:border-gray-600 rounded-lg focus:outline-none focus:border-teal-400"
+          />
+          <input
+            name="email"
+            type="email"
+            placeholder="Email"
+            value={form.email}
+            onChange={handleChange}
+            className="px-4 py-3 border border-gray-600 dark:border-gray-600 rounded-lg focus:outline-none focus:border-teal-400"
+          />
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows={5}
+            value={form.message}
+            onChange={handleChange}
+            className="px-4 py-3 border border-gray-600 dark:border-gray-600 rounded-lg focus:outline-none focus:border-teal-400"
+          />
+          <button
+            onClick={handleSubmit}
+            disabled={status === 'sending'}
+            className="px-6 py-3 bg-teal-400 text-gray-900 rounded-lg font-medium hover:bg-teal-500 transition-colors disabled:opacity-50"
+          >
+            {status === 'sending' ? 'Sending...' : 'Send Message'}
+          </button>
 
-      <div className="flex flex-col gap-4 text-left">
-        <input
-          name="name"
-          placeholder="Name"
-          value={form.name}
-          onChange={handleChange}
-          className="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-blue-600"
-        />
-        <input
-          name="email"
-          type="email"
-          placeholder="Email"
-          value={form.email}
-          onChange={handleChange}
-          className="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-blue-600"
-        />
-        <textarea
-          name="message"
-          placeholder="Message"
-          rows={5}
-          value={form.message}
-          onChange={handleChange}
-          className="px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:border-blue-600"
-        />
-        <button
-          onClick={handleSubmit}
-          disabled={status === 'sending'}
-          className="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors disabled:opacity-50"
-        >
-          {status === 'sending' ? 'Sending...' : 'Send Message'}
-        </button>
-
-        {status === 'success' && (
-          <p className="text-green-600 text-center">Thanks — your message was sent!</p>
-        )}
-        {status === 'error' && (
-          <p className="text-red-600 text-center">Something went wrong. Please try again.</p>
-        )}
+          {status === 'success' && (
+            <p className="text-green-600 text-center">Thanks — your message was sent!</p>
+          )}
+          {status === 'error' && (
+            <p className="text-red-600 text-center">Something went wrong. Please try again.</p>
+          )}
+        </div>
       </div>
 
-      <p className="text-gray-500 mt-8">
+      <p className="text-gray-400 mt-8">
         Or email me directly at{' '}
-        <a href={`mailto:${profile.email}`} className="text-blue-600 hover:underline">
+        <a href={`mailto:${profile.email}`} className="text-teal-400 hover:underline">
           {profile.email}
         </a>
       </p>

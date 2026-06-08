@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, Orbit } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
 
 const links = [
@@ -18,11 +18,19 @@ export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50  nav-glass">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#hero" className="font-bold text-lg">SM</a>
+        <a
+          href="#hero"
+            aria-label="Home"
+            className="flex items-center font-display font-bold text-lg hover:opacity-80 transition-opacity"
+            style={{ color: 'var(--accent)' }}
+          >
+            <Orbit size={20} />
+            <span>Sara</span>
+        </a>
 
         {/* Theme toggle */}
         <button
-          className="hover:text-teal-400"
+          className="flex items-center font-display font-bold text-lg icon-hover transition-opacity"
           onClick={toggle}
           aria-label="Toggle dark mode"
         >
@@ -44,7 +52,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden"
+          className="md:hidden icon-hover"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -54,7 +62,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden px-6 pb-4 flex flex-col gap-4 bg-gray-900 dark:bg-gray-900 border-b border-gray-700 dark:border-gray-700">
+        <div className="md:hidden px-6 pb-4 flex flex-col gap-4">
           {links.map((link) => (
             <a
               key={link.href}

@@ -21,7 +21,7 @@ export default function ExperienceCard({ exp }: { exp: Experience }) {
       <p className="accent font-medium mb-3">
         {exp.company} · {exp.location}
       </p>
-      <ul className="list-disc list-outside ml-5 space-y-2 mb-3">
+      <ul className="text-soft list-disc list-outside ml-5 space-y-2 mb-3">
         {exp.bullets.map((bullet, i) => (
           <li key={i}>{bullet}</li>
         ))}

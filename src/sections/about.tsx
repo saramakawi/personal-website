@@ -5,22 +5,20 @@ export default function About() {
         <h2 className="font-display text-3xl font-bold mb-8">
           <span className="accent">01.</span> About Me
         </h2>
-        <div className="max-w-3xl accent text-lg space-y-4">
+        <div className="text-soft max-w-3xl accent text-lg space-y-4">
           <p>
-            I'm a software engineer at M&amp;T Bank with three years in tech,
-            working across data engineering and enterprise platform development
-            on ServiceNow.
+            I’m a mathematician, software engineer, and artist who 
+            loves combining creativity and logic to solve problems and build amazing 
+            things. With a background in Applied and Computational Mathematics from 
+            USC, I’ve always been fascinated by how math and technology can shape 
+            the world—and I enjoy finding creative and artistic ways to bring those 
+            ideas to life.
           </p>
           <p>
-            That breadth — from building data pipelines to automating enterprise
-            workflows — gives me a systems-level view of how software delivers
-            value. I'm now focused on full-stack and frontend development,
-            bringing that same engineering rigor to building polished,
-            user-facing products.
-          </p>
-          <p>
-            This site is built with React, TypeScript, Tailwind CSS, and a
-            Node/Express backend — a demonstration as much as a description.
+            When I’m not coding, you’ll find me designing creative projects, creating 
+            art, or exploring opportunities to innovate and grow. I love connecting 
+            with others who share my curiosity and drive to make an impact—let’s chat 
+            and collaborate!
           </p>
         </div>
       </div>

@@ -17,7 +17,7 @@ export default function Education() {
             </p>
             <p className="text-sm mb-2">{edu.graduationDate}</p>
             {edu.details && (
-              <ul className="list-disc ml-5 space-y-1">
+              <ul className="text-soft list-disc ml-5 space-y-1">
                 {edu.details.map((d, j) => (
                   <li key={j}>{d}</li>
                 ))}

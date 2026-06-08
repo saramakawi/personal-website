@@ -11,7 +11,7 @@ export default function Hero() {
       <h1 className="font-display text-5xl md:text-7xl font-bold mb-4">
         {profile.name}
       </h1>
-      <h2 className="font-display text-3xl md:text-5xl font-bold mb-6">
+      <h2 className="text-soft font-display text-3xl md:text-5xl font-bold mb-6">
         {profile.title}
       </h2>
       <p className="max-w-xl text-lg mb-8">
@@ -21,7 +21,7 @@ export default function Hero() {
       <div className="flex gap-4">
         <a
           href="#contact"
-          className="px-6 py-3 rounded-lg font-medium transition-all hover:opacity-90"
+          className="px-6 py-3 rounded-lg font-medium transition-all hover:opacity-80"
           style={{ backgroundColor: 'var(--btn-primary-bg)', color: 'var(--btn-primary-text)' }}
         >
           Get in touch
@@ -30,7 +30,8 @@ export default function Hero() {
           href={profile.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="px-6 py-3 glass-panel font-medium transition-all hover:opacity-90 flex items-center gap-2"
+          className="px-6 py-3 glass-panel font-medium transition-all icon-hover flex items-center gap-2"
+          style={{ borderRadius: '0.5rem' }}
         >
           <Github size={20} /> GitHub
         </a>

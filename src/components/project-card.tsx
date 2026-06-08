@@ -10,18 +10,18 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.githubUrl && (
             <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
                aria-label="GitHub repository">
-              <Github size={20} className="transition-all duration-300 hover:shadow-[0_0_25px_rgba(91,209,196,0.4)] hover:border-teal-400/50" />
+              <Github size={20} className="transition-all duration-300 icon-hover" />
             </a>
           )}
           {project.liveUrl && (
             <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
                aria-label="Live demo">
-              <ExternalLink size={20} className="transition-all duration-300 hover:shadow-[0_0_25px_rgba(91,209,196,0.4)] hover:border-teal-400/50" />
+              <ExternalLink size={20} className="transition-all duration-300 icon-hover" />
             </a>
           )}
         </div>
       </div>
-      <p className="mb-4">{project.description}</p>
+      <p className="text-soft mb-4">{project.description}</p>
       <div className="flex flex-wrap gap-2">
         {project.technologies.map((tech) => (
           <span key={tech} className="tech-pill">

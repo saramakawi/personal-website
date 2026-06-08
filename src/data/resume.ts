@@ -3,7 +3,7 @@ import type { Profile, Experience, Education, Skill, Project } from '../types/re
 export const profile: Profile = {
   name: "Sara Makawi", // adjust to your preferred display name
   title: "Full-Stack Software Engineer",
-  tagline: "Software engineer with cross-domain experience spanning data engineering, enterprise platforms, and full-stack web development.",
+  tagline: "Software engineer who pairs mathematical rigor with design sensibility, working across full-stack development, data engineering, and enterprise platforms.",
   email: "saramakawi@alumni.usc.edu",
   location: "Buffalo, NY",
   githubUrl: "https://github.com/saramakawi",
@@ -51,7 +51,7 @@ export const education: Education[] = [
     location: "Los Angeles, CA",
     graduationDate: "2023",
     details: [
-      "Relevant coursework: Data Structures, Algorithms, Web Development",
+      "Relevant coursework: Full-Stack Web Development, Data Structures and Object Oriented Design, Mathematics for Machine Learning",
     ],
   },
 ];

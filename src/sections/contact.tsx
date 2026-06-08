@@ -79,7 +79,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <p className="mt-8">
+      <p className="mt-8 text-center">
         Or email me directly at{' '}
         <a href={`mailto:${profile.email}`} className="accent hover:underline">
           {profile.email}

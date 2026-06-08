@@ -35,7 +35,7 @@ export default function Contact() {
           <span className="accent">06.</span> Get In Touch
         </h2>
         <p className="accent mb-8">
-          Open to full-stack and frontend opportunities. Drop me a message.
+          I'm open to new possibilities and opportunities. Let's connect!
         </p>
         <div className="flex flex-col gap-4 text-left">
           <input

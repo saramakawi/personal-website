@@ -12,9 +12,10 @@ import Reveal from './components/reveal.tsx';
 
 function App() {
   return (
-    <div className="text-gray-100 min-h-screen">
+    <div className="min-h-screen">
       <div className="celestial-bg" />
-      <div className="fixed inset-0 -z-[15] bg-black/40" />
+      <div className="fixed inset-0 z-[-15] theme-overlay" />
+      <div className="grain-overlay" />
       <Starfield />
       <Navbar />
       <main className="pt-16">

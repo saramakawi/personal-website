@@ -29,13 +29,14 @@ export default function Starfield() {
       {stars.map((star) => (
         <div
           key={star.id}
-          className="absolute rounded-full bg-amber-50"
+          className="absolute rounded-full"
           style={{
             left: `${star.left}%`,
             top: `${star.top}%`,
             width: `${star.size}px`,
             height: `${star.size}px`,
-            boxShadow: '0 0 8px 2px rgba(240, 230, 200, 0.9)',
+            backgroundColor: 'var(--star)',
+            boxShadow: '0 0 8px 2px var(--star)',
             animation: `twinkle ${star.duration}s ease-in-out ${star.delay}s infinite`,
           }}
         />

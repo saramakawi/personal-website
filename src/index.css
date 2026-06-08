@@ -1,37 +1,159 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --font-display: "Fraunces", serif;
+  --font-body: "Outfit", sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: var(--font-body);
+  color: var(--text-main);
+}
+
+.accent { 
+  color: var(--accent); 
+}
+.text-soft { 
+  color: var(--text-soft); 
+}
+
 /* Animated celestial gradient background */
 @keyframes gradientShift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0%   { background-position: 0% 0%,   100% 0%,  50% 100%, 0% 50%,  50% 50%; }
+  50%  { background-position: 20% 30%, 80% 20%,  40% 70%,  30% 60%, 50% 50%; }
+  100% { background-position: 0% 0%,   100% 0%,  50% 100%, 0% 50%,  50% 50%; }
 }
 
 .celestial-bg {
   position: fixed;
   inset: 0;
   z-index: -20;
-  background: linear-gradient(
-    135deg,
-    #0d0a1a,
-    #1a1535,
-    #1e2a5e,
-    #4a2b6b,
-    #7a2f6e,
-    #2d8f8a,
-    #1a1535,
-    #0d0a1a
-  );
-  background-size: 400% 400%;
+  background-color: var(--bg-base);
+  background-image:
+    radial-gradient(ellipse 60% 50% at 20% 25%, var(--bloom-1), transparent),
+    radial-gradient(ellipse 50% 60% at 80% 20%, var(--bloom-2), transparent),
+    radial-gradient(ellipse 55% 50% at 70% 75%, var(--bloom-3), transparent),
+    radial-gradient(ellipse 50% 55% at 25% 80%, var(--bloom-4), transparent),
+    radial-gradient(ellipse 45% 45% at 50% 50%, var(--bloom-5), transparent);
+  background-size: 200% 200%;
   animation: gradientShift 30s ease infinite;
+}
+
+.grain-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: -12;
+  pointer-events: none;
+  opacity: 0.12;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 @keyframes twinkle {
   0%, 100% { opacity: 0.2; transform: scale(0.8); }
   50%      { opacity: 1;   transform: scale(1.2); }
+}
+
+@keyframes burstPulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.85); }
+  50%      { opacity: 1;   transform: scale(1.1); }
+}
+
+.burst-glow {
+  filter: drop-shadow(0 0 6px rgba(240, 230, 200, 0.7))
+          drop-shadow(0 0 12px rgba(200, 180, 230, 0.4));
+}
+
+:root {
+  /* Light "daytime celestial" — pastels */
+  --bg-base: #e8e0f0;   
+  --bloom-1: #e4b5d4ee;  /* soft pink */
+  --bloom-2: #b5c8e4ee;  /* powder blue */
+  --bloom-3: #b5e4dcdd;  /* minty teal */
+  --bloom-4: #d4c2e8ee;  /* lavender */
+  --bloom-5: #f0e0e8cc;  /* blush */
+  --overlay: 255 255 255;     /* white overlay in light mode */
+  --overlay-alpha: 0.1;
+  --panel: 255 255 255;       /* light glass panels */
+  --panel-alpha: 0.4;
+  --text-main: #2a2440;       /* dark text on light bg */
+  --text-soft: #5a5470;
+  --accent: #9a5fb0;          /* deeper purple accent for contrast */
+  --star: #f0e6c8;            /* soft pink stars */
+  --btn-primary-bg: #9a5fb0;       /* deep purple button in light mode */
+  --btn-primary-text: #ffffff;
+  --border-soft: 42 36 64;          /* dark border, as RGB for alpha use */
+  --pill-bg: 154 95 176;      /* purple, RGB for alpha */
+  --pill-text: #6b3a82;       /* darker purple text for contrast on light */
+}
+
+.dark {
+  /* Your existing celestial dark palette */
+  --bg-base: #0d0a1a;
+  --bloom-1: #7a2f6ecc;
+  --bloom-2: #1e2a5ecc;
+  --bloom-3: #2d8f8abb;
+  --bloom-4: #4a2b6bcc;
+  --bloom-5: #1a1535aa;
+  --overlay: 0 0 0;           /* black overlay in dark mode */
+  --overlay-alpha: 0.2;
+  --panel: 0 0 0;             /* dark glass panels */
+  --panel-alpha: 0.2;
+  --text-main: #ffffff;
+  --text-soft: #d1d5db;
+  --accent: #2dd4bf;          /* teal-400 */
+  --star: #f0e6c8;            /* cream stars */
+  --btn-primary-bg: #2dd4bf;       /* teal button in dark mode */
+  --btn-primary-text: #0d0a1a;
+  --border-soft: 255 255 255;       /* light border */
+  --pill-bg: 45 212 191;      /* teal, RGB */
+  --pill-text: #5eead4;       /* light teal text */
+  
+}
+
+.theme-overlay {
+  background-color: rgb(var(--overlay) / var(--overlay-alpha));
+}
+
+.glass-panel {
+  background-color: rgb(var(--panel) / var(--panel-alpha));
+  backdrop-filter: blur(12px);
+  border: 1px solid rgb(255 255 255 / 0.1);
+  border-radius: 1rem;
+}
+
+.nav-glass {
+  background-color: rgb(var(--panel) / var(--panel-alpha));
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgb(var(--border-soft) / 0.1);
+}
+
+.border-soft { 
+  border-color: rgb(var(--border-soft) / 0.15); 
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 25px rgb(var(--glow) / 0.4);
+}
+
+.tech-pill {
+  background-color: rgb(var(--pill-bg) / 0.12);
+  color: var(--pill-text);
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+}
+
+.skill-pill {
+  background-color: rgb(var(--pill-bg) / 0.12);
+  color: var(--pill-text);
+  font-size: 0.875rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  display: inline-block;
 }

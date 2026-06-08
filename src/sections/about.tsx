@@ -1,11 +1,11 @@
 export default function About() {
     return (
     <section id="about" className="max-w-5xl mx-auto px-6 py-24">
-      <div className="rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 p-8 md:p-12">
-        <h2 className="text-3xl font-bold text-white mb-8">
-          <span className="text-teal-400">01.</span> About Me
+      <div className="glass-panel p-8 md:p-12">
+        <h2 className="font-display text-3xl font-bold mb-8">
+          <span className="accent">01.</span> About Me
         </h2>
-        <div className="max-w-3xl text-gray-400 text-lg space-y-4">
+        <div className="max-w-3xl accent text-lg space-y-4">
           <p>
             I'm a software engineer at M&amp;T Bank with three years in tech,
             working across data engineering and enterprise platform development

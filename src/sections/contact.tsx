@@ -30,11 +30,11 @@ export default function Contact() {
 
   return (
     <section id="contact" className="max-w-5xl mx-auto px-6 py-24">
-      <div className="rounded-2xl bg-black/20 backdrop-blur-md border border-white/10 p-8 md:p-12">
-        <h2 className="text-3xl font-bold text-white mb-8">
-          <span className="text-teal-400">06.</span> Get In Touch
+      <div className="glass-panel p-8 md:p-12">
+        <h2 className="font-display text-3xl font-bold mb-8">
+          <span className="accent">06.</span> Get In Touch
         </h2>
-        <p className="text-gray-400 dark:text-gray-400 mb-8">
+        <p className="accent mb-8">
           Open to full-stack and frontend opportunities. Drop me a message.
         </p>
         <div className="flex flex-col gap-4 text-left">
@@ -43,7 +43,7 @@ export default function Contact() {
             placeholder="Name"
             value={form.name}
             onChange={handleChange}
-            className="px-4 py-3 border border-gray-600 dark:border-gray-600 rounded-lg focus:outline-none focus:border-teal-400"
+            className="px-4 py-3 border border-soft rounded-lg focus:outline-none focus:border-teal-400"
           />
           <input
             name="email"
@@ -51,7 +51,7 @@ export default function Contact() {
             placeholder="Email"
             value={form.email}
             onChange={handleChange}
-            className="px-4 py-3 border border-gray-600 dark:border-gray-600 rounded-lg focus:outline-none focus:border-teal-400"
+            className="px-4 py-3 border border-soft rounded-lg focus:outline-none focus:border-teal-400"
           />
           <textarea
             name="message"
@@ -59,12 +59,13 @@ export default function Contact() {
             rows={5}
             value={form.message}
             onChange={handleChange}
-            className="px-4 py-3 border border-gray-600 dark:border-gray-600 rounded-lg focus:outline-none focus:border-teal-400"
+            className="px-4 py-3 border border-soft rounded-lg focus:outline-none focus:border-teal-400"
           />
           <button
             onClick={handleSubmit}
             disabled={status === 'sending'}
-            className="px-6 py-3 bg-teal-400 text-gray-900 rounded-lg font-medium hover:bg-teal-500 transition-colors disabled:opacity-50"
+            className="px-6 py-3 rounded-lg font-medium transition-all hover:opacity-90"
+            style={{ backgroundColor: 'var(--btn-primary-bg)', color: 'var(--btn-primary-text)' }}
           >
             {status === 'sending' ? 'Sending...' : 'Send Message'}
           </button>
@@ -78,9 +79,9 @@ export default function Contact() {
         </div>
       </div>
 
-      <p className="text-gray-400 mt-8">
+      <p className="mt-8">
         Or email me directly at{' '}
-        <a href={`mailto:${profile.email}`} className="text-teal-400 hover:underline">
+        <a href={`mailto:${profile.email}`} className="accent hover:underline">
           {profile.email}
         </a>
       </p>

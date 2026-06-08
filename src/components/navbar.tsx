@@ -16,13 +16,13 @@ export default function Navbar() {
   const { isDark, toggle } = useTheme();
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-700 dark:border-gray-700">
+    <nav className="fixed top-0 left-0 right-0 z-50  nav-glass">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#hero" className="font-bold text-lg text-white dark:text-gray-100">SM</a>
+        <a href="#hero" className="font-bold text-lg">SM</a>
 
         {/* Theme toggle */}
         <button
-          className="text-gray-400 dark:text-gray-300 hover:text-teal-500"
+          className="hover:text-teal-400"
           onClick={toggle}
           aria-label="Toggle dark mode"
         >
@@ -35,7 +35,7 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-gray-400 dark:text-gray-300 hover:text-teal-500 transition-colors"
+              className="text-soft hover:text-(--accent) transition-colors"
             >
               {link.label}
             </a>
@@ -44,7 +44,7 @@ export default function Navbar() {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-white dark:text-gray-100"
+          className="md:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -60,7 +60,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="text-gray-300 dark:text-gray-300 hover:text-teal-400 transition-colors"
+              className="text-soft hover:text-(--accent) transition-colors"
             >
               {link.label}
             </a>

@@ -69,7 +69,7 @@ export const projects: Project[] = [
     description: "My personal website: a full-stack portfolio built with React, TypeScript, Tailwind, and a Node/Express backend with a working contact form.",
     technologies: ["React", "TypeScript", "Tailwind", "Node.js", "Express"],
     githubUrl: "https://github.com/saramakawi/personal-website",
-    liveUrl: "https://www.saramakawi.com"
+    liveUrl: "https://saramakawi.com"
   },
   {
     name: "Stardial",

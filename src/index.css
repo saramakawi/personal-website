@@ -66,6 +66,10 @@ body {
   color: var(--text-main);
 }
 
+html, body {
+  background-color: var(--bg-base);
+}
+
 /* ── Keyframes ──────────────────────────────────────────── */
 
 @keyframes gradientDrift {

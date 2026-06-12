@@ -26,7 +26,7 @@ export default function Starfield() {
   const [stars] = useState<Star[]>(generateStars);
 
   return (
-    <div className="fixed inset-0 h-lvh -z-10 overflow-hidden pointer-events-none">
+    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
       {stars.map((star) => (
         <div
           key={star.id}

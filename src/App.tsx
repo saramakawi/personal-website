@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="min-h-screen">
       <div className="celestial-bg" />
-      <div className="fixed inset-0 z-[-15] h-lvh theme-overlay" />
+      <div className="fixed inset-0 z-[-15] theme-overlay" />
       <div className="grain-overlay" />
       <Starfield />
       <Navbar />

@@ -21,11 +21,10 @@ export default function Navbar() {
         <a
           href="#hero"
             aria-label="Home"
-            className="flex items-center font-display font-bold text-lg hover:opacity-80 transition-opacity"
-            style={{ color: 'var(--accent)' }}
+            className="accent hover:opacity-80 transition-opacity"
           >
-            <Orbit size={20} />
-            <span>Sara</span>
+            <Orbit size={24} />
+          
         </a>
 
         {/* Theme toggle */}

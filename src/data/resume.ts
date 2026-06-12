@@ -66,10 +66,16 @@ export const skills: Skill[] = [
 export const projects: Project[] = [
   {
     name: "Personal Website",
-    description: "My personal site: a full-stack portfolio built with React, TypeScript, Tailwind, and a Node/Express backend with a working contact form.",
+    description: "My personal website: a full-stack portfolio built with React, TypeScript, Tailwind, and a Node/Express backend with a working contact form.",
     technologies: ["React", "TypeScript", "Tailwind", "Node.js", "Express"],
     githubUrl: "https://github.com/saramakawi/personal-website",
     liveUrl: "", // fill in after Phase 8 deployment
   },
-  // We'll add the 2-3 gap-targeting projects from Phase 7 here later
+  {
+    name: "Stardial",
+    description: "An interactive astrology dashboard that computes real planetary positions for any date using astronomical algorithms, visualized as a custom-built SVG zodiac wheel.",
+    technologies: ["React", "TypeScript", "Vite", "Tailwind CSS", "astronomy-engine", "Recharts", "SVG"],
+    githubUrl: "https://github.com/saramakawi/stardial",
+    liveUrl: "https://stardial.vercel.app"
+  },
 ];

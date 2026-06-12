@@ -7,8 +7,7 @@ export default function ExperienceCard({ exp }: { exp: Experience }) {
         style={{ borderLeft: '2px solid rgb(var(--border-soft) / 0.25)' }}
       >
       <div
-        className="absolute w-3 h-3 rounded-full -left-1.75 top-1.5"
-        style={{ backgroundColor: 'var(--accent)' }}
+        className="absolute w-3 h-3 rounded-full -left-1.75 top-1.5 bg-(--accent)"
       />
       <div className="flex flex-wrap justify-between items-baseline gap-2 mb-1">
         <h3 className="text-xl font-semibold">

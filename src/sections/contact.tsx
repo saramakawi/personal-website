@@ -64,8 +64,7 @@ export default function Contact() {
           <button
             onClick={handleSubmit}
             disabled={status === 'sending'}
-            className="px-6 py-3 rounded-lg font-medium transition-all hover:opacity-90"
-            style={{ backgroundColor: 'var(--btn-primary-bg)', color: 'var(--btn-primary-text)' }}
+            className="px-6 py-3 rounded-lg font-medium transition-all hover:opacity-90 btn-primary"
           >
             {status === 'sending' ? 'Sending...' : 'Send Message'}
           </button>

@@ -33,10 +33,10 @@ export default function Starfield() {
           style={{
             left: `${star.left}%`,
             top: `${star.top}%`,
-            width: `${star.size}px`,
-            height: `${star.size}px`,
-            backgroundColor: 'var(--star)',
-            boxShadow: '0 0 8px 2px var(--star)',
+            width: `${star.size * 4}px`,
+            height: `${star.size * 4}px`,
+            background: `radial-gradient(circle, var(--star) 0%, var(--star) ${100 / 4}%, transparent 70%)`,
+            willChange: 'opacity, transform',
             animation: `twinkle ${star.duration}s ease-in-out ${star.delay}s infinite`,
           }}
         />

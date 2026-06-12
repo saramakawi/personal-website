@@ -21,8 +21,7 @@ export default function Hero() {
       <div className="flex gap-4">
         <a
           href="#contact"
-          className="px-6 py-3 rounded-lg font-medium transition-all hover:opacity-80"
-          style={{ backgroundColor: 'var(--btn-primary-bg)', color: 'var(--btn-primary-text)' }}
+          className="px-6 py-3 font-medium transition-all hover:opacity-80 btn-primary"
         >
           Get in touch
         </a>
@@ -31,9 +30,8 @@ export default function Hero() {
           target="_blank"
           rel="noopener noreferrer"
           className="px-6 py-3 glass-panel font-medium transition-all icon-hover flex items-center gap-2"
-          style={{ borderRadius: '0.5rem' }}
         >
-          <Github size={20} /> GitHub
+          <Github size={20}/> GitHub
         </a>
       </div>
     </section>

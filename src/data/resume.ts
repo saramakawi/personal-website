@@ -1,3 +1,4 @@
+// This holds the content data for profile, experience, education, skills, and projects.
 import type { Profile, Experience, Education, Skill, Project } from '../types/resume';
 
 export const profile: Profile = {

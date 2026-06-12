@@ -1,3 +1,5 @@
+// This is the root component that composes all sections and renders the full page layout.
+
 import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Starfield from './components/starfield';

@@ -1,3 +1,5 @@
+// This component renders a single project card with description, links, and tech pills.
+
 import { Github, ExternalLink } from 'lucide-react';
 import type { Project } from '../types/resume';
 

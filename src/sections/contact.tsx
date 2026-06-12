@@ -1,3 +1,5 @@
+// This is the Contact section with a form that submits messages to the backend API.
+
 import { useState } from 'react';
 import { profile } from '../data/resume';
 
@@ -31,9 +33,9 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="max-w-5xl mx-auto px-6 py-24">
+    <section id="contact" className="section-wrapper">
       <div className="glass-panel p-8 md:p-12">
-        <h2 className="font-display text-3xl font-bold mb-8">
+        <h2 className="section-heading">
           <span className="accent">06.</span> Get In Touch
         </h2>
         <p className="accent mb-8">
@@ -45,7 +47,7 @@ export default function Contact() {
             placeholder="Name"
             value={form.name}
             onChange={handleChange}
-            className="px-4 py-3 border border-soft rounded-lg focus:outline-none focus:border-teal-400"
+            className="input-field"
           />
           <input
             name="email"
@@ -53,7 +55,7 @@ export default function Contact() {
             placeholder="Email"
             value={form.email}
             onChange={handleChange}
-            className="px-4 py-3 border border-soft rounded-lg focus:outline-none focus:border-teal-400"
+            className="input-field"
           />
           <textarea
             name="message"
@@ -61,7 +63,7 @@ export default function Contact() {
             rows={5}
             value={form.message}
             onChange={handleChange}
-            className="px-4 py-3 border border-soft rounded-lg focus:outline-none focus:border-teal-400"
+            className="input-field"
           />
           <button
             onClick={handleSubmit}

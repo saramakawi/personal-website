@@ -1,10 +1,12 @@
+// This is the Education section listing degrees and relevant coursework.
+
 import { education } from '../data/resume';
 
 export default function Education() {
   return (
-    <section id="education" className="max-w-5xl mx-auto px-6 py-24">
+    <section id="education" className="section-wrapper">
       <div className="glass-panel p-8 md:p-12">
-        <h2 className="font-display text-3xl font-bold mb-8">
+        <h2 className="section-heading">
           <span className="accent">03.</span>Education
         </h2>
         {education.map((edu, i) => (

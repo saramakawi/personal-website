@@ -1,3 +1,4 @@
+// This renders a fixed background layer of randomly placed, twinkling star dots.
 import { useState } from 'react';
 
 type Star = {

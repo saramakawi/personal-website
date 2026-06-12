@@ -1,73 +1,35 @@
-# React + TypeScript + Vite
+## My Website ##
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web application showcasing my background, experience,  and projects along with a contact form backed by Node/Express API.
 
-Currently, two official plugins are available:
+Live: https://saramakawi.com
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview ##
 
-## React Compiler
+A single-page resume and portfolio built with React and Typescript with a custom design system encompassing my favorite color palletes and featuring glass-morphism panels, animated gradient starfield background, and full light/dark theming. The contact form is wired to a separate Express backend that emails submissions to me directly.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This repo is the frontend. The contact API lives in a separate repo: https://github.com/saramakawi/personal-website-api
 
-## Expanding the ESLint configuration
+## Tech Stack ##
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Frontend: React + TypeScript, Vite, Tailwind CSS, Framer Motion (scroll animations), Lucide (icons)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Backend (seprate repo): Node.js + Express + TypeScript, Resend (email delivery)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Deployment: Frontend on Vercel, Backend on Render
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Architecture ##
+
+The site separates content from presentation: all résumé data (experience, education, skills, projects) lives in typed TypeScript objects in src/data/, defined by interfaces in src/types/. Section components map over this data, so updating the resume means editing one data file rather than touching markup.
+
+Theming is implemented with CSS custom properties that swap via a single .dark class — every color routes through semantic variables (--accent, --text-main, --panel, etc.), so light and dark modes share one set of components.
+
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+  src/
+  ├── data/         # résumé content as typed objects (source of truth)
+  ├── types/        # TypeScript interfaces
+  ├── sections/     # page sections (Hero, About, Experience, etc.)
+  ├── components/   # reusable UI (Navbar, Footer, cards, Starfield)
+  ├── hooks/        # custom hooks (theme, persistent state)
+  └── App.tsx
 ```

@@ -1,3 +1,5 @@
+// This wrapper animates its children into view as they scroll into the viewport.
+
 import { motion } from 'framer-motion';
 import type { ReactNode } from 'react';
 

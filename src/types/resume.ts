@@ -1,3 +1,4 @@
+// TypeScript interfaces for all resume data shapes used throughout the app.
 export interface Experience {
     company: string;
     role: string;

@@ -1,3 +1,5 @@
+/* Global styles, design tokens, and reusable component classes. */
+
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
@@ -109,6 +111,22 @@ body {
   background-color: rgb(var(--overlay) / var(--overlay-alpha));
 }
 
+/* ── Layout ─────────────────────────────────────────────── */
+
+.section-wrapper {
+  max-width: 64rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  padding-block: 6rem;
+}
+
+.section-heading {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
 /* ── Utilities ──────────────────────────────────────────── */
 
 .accent {
@@ -128,7 +146,7 @@ body {
 .glass-panel {
   background-color: rgb(var(--panel) / var(--panel-alpha));
   backdrop-filter: blur(8px);
-  border: 1px solid rgb(255 255 255 / 0.1);
+  border: 1px solid rgb(var(--border-soft) / 0.1);
   border-radius: 1rem;
   transform: translateZ(0);
 }
@@ -171,10 +189,22 @@ body {
   color: var(--accent);
 }
 
+.input-field {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgb(var(--border-soft) / 0.15);
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: var(--text-main);
+  transition: border-color 0.2s ease;
+}
+.input-field:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
 /* ── Accessibility ──────────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {
   .celestial-bg { animation: none; }
-  .twinkle, [class*="burst"] { animation: none; }
   * { animation-duration: 0.01ms !important; }
 }

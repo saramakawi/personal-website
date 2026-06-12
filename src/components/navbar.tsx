@@ -1,3 +1,5 @@
+// This is the fixed top navigation bar with section links, theme toggle, and mobile menu.
+
 import { useState } from 'react';
 import { Menu, X, Sun, Moon, Orbit } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';

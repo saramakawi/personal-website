@@ -1,11 +1,13 @@
+// This is the About section with a brief personal bio.
+
 export default function About() {
     return (
-    <section id="about" className="max-w-5xl mx-auto px-6 py-24">
+    <section id="about" className="section-wrapper">
       <div className="glass-panel p-8 md:p-12">
-        <h2 className="font-display text-3xl font-bold mb-8">
+        <h2 className="section-heading">
           <span className="accent">01.</span> About Me
         </h2>
-        <div className="text-soft max-w-3xl accent text-lg space-y-4">
+        <div className="text-soft max-w-3xl text-lg space-y-4">
           <p>
             I’m a mathematician, software engineer, and artist who 
             loves combining creativity and logic to solve problems and build amazing 

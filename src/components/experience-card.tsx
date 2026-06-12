@@ -1,3 +1,6 @@
+// This component renders a single work experience entry with a timeline marker 
+// for the Experience section.
+
 import type { Experience } from '../types/resume';
 
 export default function ExperienceCard({ exp }: { exp: Experience }) {

@@ -1,3 +1,5 @@
+// This is a custom hook that manages dark/light mode state with localStorage persistence.
+
 import { useState, useEffect } from 'react';
 
 export function useTheme() {

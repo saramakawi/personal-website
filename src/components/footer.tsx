@@ -1,3 +1,5 @@
+// This is the footer with social icon links.
+
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { profile } from '../data/resume';
 

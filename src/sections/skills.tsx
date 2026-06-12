@@ -1,10 +1,12 @@
+// This is the Skills section displaying technology categories as pill badges.
+
 import { skills } from '../data/resume';
 
 export default function Skills() {
   return (
-    <section id="skills" className="max-w-5xl mx-auto px-6 py-24">
+    <section id="skills" className="section-wrapper">
       <div className="glass-panel p-8 md:p-12">
-        <h2 className="font-display text-3xl font-bold mb-8">
+        <h2 className="section-heading">
           <span className="accent">04.</span> Skills
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

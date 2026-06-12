@@ -1,3 +1,5 @@
+// This is the full-screen landing section with name, title, and call-to-action buttons.
+
 import { Github } from 'lucide-react';
 import { profile } from '../data/resume';
 

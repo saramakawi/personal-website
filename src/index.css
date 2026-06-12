@@ -82,10 +82,10 @@ body {
 
 .celestial-bg {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100lvh;
+  top: -25%;
+  left: -25%;
+  width: 150%;
+  height: 150%;
   z-index: -20;
   background-color: var(--bg-base);
   background-image:
@@ -100,10 +100,10 @@ body {
 
 .grain-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100lvh;
+  top: -25%;
+  left: -25%;
+  width: 150%;
+  height: 150%;
   z-index: -15;
   pointer-events: none;
   opacity: 0.12;
